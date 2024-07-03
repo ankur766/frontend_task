@@ -1,29 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
-import {useNavigate} from 'react-router-dom'
-import '../assets/css/commonInput.css'
+export default function EditData(props) {
+  const { id } = useParams();
+  const { editUser, userState } = props;
 
-const InputHandler = (props) => {
-  const { addUser } = props;
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  
-const Navigate=useNavigate();
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const user = userState.users.find(user => user.id === id);
+    if (user) {
+      setName(user.name);
+      setEmail(user.email);
+    }
+  }, [id, userState.users]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (!name || !email) {
       alert("Please enter both name and email.");
       return;
     }
-   console.log(name)
-    addUser({ name, email });
-    setName(""); 
-    setEmail("");
-    Navigate('/')
+
+    const isConfirmed = window.confirm("Are you sure you want to submit?");
+    if (isConfirmed) {
+      editUser(id, { name, email });
+      navigate("/");
+    }
+  
   };
+ 
 
   return (
-     
     <form className="form">
   <div className="form-group">
     <label htmlFor="name">Your Name</label>
@@ -62,8 +75,9 @@ const Navigate=useNavigate();
     Submit
   </button>
 </form>
-  
   );
-};
+}
 
-export default InputHandler;
+
+
+ 

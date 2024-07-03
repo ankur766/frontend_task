@@ -1,0 +1,28 @@
+.table{
+   width: 50rem;
+   height: fit-content;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+    border: 0.7rem solid #c88328;
+  
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.data-grid {
+    background-color: white;
+    color: black;
+  }
+  
+  .data-grid .MuiDataGrid-colCell {
+    font-weight: bold;
+    text-align: center;
+    font-style: initial;
+
+  }
+  
+  

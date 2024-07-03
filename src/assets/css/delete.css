@@ -1,0 +1,28 @@
+.deleteContainer{
+   display: flexbox;
+    height: auto;
+    width: 30vw;
+    margin-left: 30rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    color: aliceblue;
+    z-index: 100;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 10rem;
+
+}
+.deleteContainer h1{
+    margin-left: 1rem;
+}
+.deleteContainer button{
+margin-left: 2rem;
+   
+color: aliceblue;
+
+ border: none;
+justify-content: center;
+align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+}
