@@ -19,12 +19,18 @@ const Navigate=useNavigate();
     addUser({ name, email });
     setName(""); 
     setEmail("");
-    Navigate('/')
   };
-
+const handelnavigate=()=>{
+  Navigate('/')
+}
   return (
-     
-    <form className="form">
+     <div className="form">
+      <button  className="btn btn-primary" onClick={ handelnavigate}>No more Data</button>
+      <h1 className="heading">Add User</h1> 
+
+  
+   <form >
+    
   <div className="form-group">
     <label htmlFor="name">Your Name</label>
     <input
@@ -62,6 +68,7 @@ const Navigate=useNavigate();
     Submit
   </button>
 </form>
+</div>
   
   );
 };
