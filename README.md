@@ -2,22 +2,7 @@
 
 ## Overview
 
-This is a simple user management application built with React and Redux. The application allows users to add and display user information. It uses `antd` for UI components and `react-redux` for state management.
-
-## DEMO of Project
- -> ##Table
-![image](https://github.com/ankur766/frontend_task/assets/106395652/7da0767a-b97d-41d0-a3d3-15fbc203dba3)
-## Add USER
-![image](https://github.com/ankur766/frontend_task/assets/106395652/5c3bfc1d-81e9-4f66-959e-13d4a00a8252)
-
-## Update User
-![image](https://github.com/ankur766/frontend_task/assets/106395652/5d19473c-c31e-4413-b7fb-495fe54229bd)
-## Delete User
-![image](https://github.com/ankur766/frontend_task/assets/106395652/3b105a32-0d4c-43e0-976b-59f8f49bfe04)
-
-
-
-
+This project is a part of a front-end task assigned by Impress AI. It is a user management application built with React and Redux. The application allows users to add and display user information using a simple and user-friendly interface. Ant Design (antd) is used for styling and UI components.
 
 ## Features
 
@@ -33,6 +18,18 @@ This is a simple user management application built with React and Redux. The app
 - **Ant Design (antd)**: For UI components.
 - **JavaScript (ES6)**: The programming language used.
 - **HTML/CSS**: For structuring and styling the web page.
+
+## DEMO of Project
+  ## Table
+![image](https://github.com/ankur766/frontend_task/assets/106395652/7da0767a-b97d-41d0-a3d3-15fbc203dba3)
+## Add USER
+![image](https://github.com/ankur766/frontend_task/assets/106395652/5c3bfc1d-81e9-4f66-959e-13d4a00a8252)
+
+## Update User
+![image](https://github.com/ankur766/frontend_task/assets/106395652/5d19473c-c31e-4413-b7fb-495fe54229bd)
+## Delete User
+![image](https://github.com/ankur766/frontend_task/assets/106395652/3b105a32-0d4c-43e0-976b-59f8f49bfe04)
+
 
 ## Installation
 
