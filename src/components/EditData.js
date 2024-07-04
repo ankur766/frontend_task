@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
 import '../assets/css/commonInput.css'
 export default function EditData(props) {
   const { id } = useParams();
@@ -38,54 +42,99 @@ export default function EditData(props) {
     navigate('/')
   }
 
+
+ 
   return (
     <div className="formcontainer">
-   
-    <h1 className="heading">Update User</h1> 
+      <h1 className="heading">Update User</h1>
+      <Box
+        component="form"
+        sx={{
+          '& .MuiTextField-root': { 
+            m: 2,
+            width: '25ch',
+            color:'white',
+            background:'#e3af6b',
+            borderRadius: 20,   
+           
+          },
+          '& .MuiButton-root': {
+            m: 2,
+          },
+          '& .btnclass1': {
+            backgroundColor: '#3f51b5',
+            color: 'white',
+            '&:hover': {
+              backgroundColor: '#303f9f', 
+            },
+          },
+          '& .btnclass2': {
+            backgroundColor: 'red',
+            color: 'white',
+            '&:hover': {
+              backgroundColor: '#7e0606', 
+            },
 
 
- <form >
-  
-<div className="form-group">
-  <label htmlFor="name">Your Name</label>
-  <input
-    type="text"
-    className="form-control"
-  
-   required
-    placeholder="Enter Name"
+           
+          },
 
-    value={name} 
-      onChange={(e) => {
-       setName(e.target.value);
-     }}
+          '& .MuiOutlinedInput-root': {
+        '& fieldset': {
+          borderColor: 'white', 
+          borderRadius: 20,    
+          borderWidth: 2,      
+          fontSize: 24,  
+        },
+        '& input': {
+                 
+          fontWeight: 'bold',   
+        },
+      },
+      '& .MuiInputLabel-root': {
+        color: 'black', 
+        fontSize: 20,      
+        fontWeight: 'bold',    
+      },
     
-
-  />
-</div>
-<div className="form-group">
-  <label htmlFor="email">Email Address</label>
-  <input
-    type="email"
-    className="form-control"
-   
-    placeholder="abc@gmail.com"
-    required
-    value={email} 
-    onChange={(e) => {
-     setEmail(e.target.value);
-       }}
-
-  />
-</div>
-
-<button type="submit" className="btnclass btn btn-primary" onClick={handleSubmit}>
-  Submit
-</button>
- <button  className=" btnclass btn btn-danger" onClick={ handelnavigate}>Cancle</button>
-
-</form>
-</div>
+          '.MuiFormControl-root': {
+            margin: '10px',
+          },
+          '.heading': {
+            color: 'white', 
+            fontSize: '30px', 
+           
+            fontFamily:'initial',
+            fontWeight:'25ch'
+          },
+        }}
+        noValidate
+        autoComplete="off"
+      >
+        <div>
+          <TextField
+            id="name"
+            label="Name"
+            required
+            placeholder="Enter Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+           
+          />
+          <TextField
+            id="email"
+            label="Email"
+            required
+            placeholder="abc@gmail.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+           
+          />
+          <Button className="btnclass1" variant="contained" onClick={handleSubmit}>Update</Button>
+          <Button className="btnclass2" variant="contained" onClick={handelnavigate}>Cancle</Button>
+        </div>
+      </Box>
+    </div>
   );
 }
 

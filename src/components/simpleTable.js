@@ -14,11 +14,11 @@ const SimpleTable = ({ dataSource}) => {
       width: 150,
       renderCell: (params) => (
         <div>
-          <Link to={`/edit/${params.id}`}>
+          <Link to={`impressai/edit/${params.id}`}>
             <button className="btn btn-primary">Edit</button>
           </Link>
           <span style={{ margin: '0 5px' }}></span> 
-          <Link to={`/delete/${params.id}`}>
+          <Link to={`impressai/delete/${params.id}`}>
             <button className="btn btn-danger">Delete</button>
           </Link>
         </div>

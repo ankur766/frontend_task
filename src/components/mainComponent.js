@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SimpleTable from "./simpleTable";
+import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
 import '../assets/css/mainComponents.css'
 
@@ -16,15 +17,11 @@ function MainComponent(props) {
 
   return (
     <div id="main-container-wrapper"> 
-    <nav className="navbar navbar-light ">
-  <div className="container-fluid">
-    <span className=" navbarName">impress AI</span>
-  </div>
-</nav>
+    
 
     <div id="main-container"> 
 
-    <Link to="/add" ><button type="button" class="btn btn-info addbtn">Add Users</button></Link>
+    <Link to="impressai/add" > <Button className="btnclass1" variant="contained" >ADD User</Button></Link>
       <SimpleTable dataSource={users} />
       </div>
     </div>

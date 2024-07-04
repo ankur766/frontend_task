@@ -14,12 +14,17 @@ import '../src/assets/css/style.css'
 function App(props) {
   return (
     <Router>
+      <nav className="navbar navbar-light ">
+       <div className="container-fluid">
+       <span className=" navbarName">impress Ai</span>
+      </div>
+      </nav>
       <Routes>
-        <Route path="/" element={<MainComponent{...props} />} />
-        <Route path="/add" element={<InputHandler  addUser={props.addUser}/>} />
+        <Route path="/"  element={<MainComponent{...props} />} />
+        <Route path="impressai/add" element={<InputHandler  addUser={props.addUser}/>} />
  
-        <Route path="/edit/:id" element={<EditData {...props} />} />
-        <Route path="/delete/:id" element={<DeleteData  deleteUser={props.deleteUser}/>} />
+        <Route path="impressai/edit/:id" element={<EditData {...props} />} />
+        <Route path="impressai/delete/:id" element={<DeleteData  deleteUser={props.deleteUser}/>} />
       </Routes>
     </Router>
   );
