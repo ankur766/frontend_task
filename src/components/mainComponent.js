@@ -21,7 +21,26 @@ function MainComponent(props) {
 
     <div id="main-container"> 
 
-    <Link to="impressai/add" > <Button className="btnclass1" variant="contained" >ADD User</Button></Link>
+    <Link to="impressai/add" > <Button className="btnclass1" variant="contained"
+    style={{
+      backgroundColor: "#c88328",
+      color: "white",
+      borderRadius: "20px",
+      width: "200px",
+      height: "50px",
+      fontSize: "20px",
+      fontWeight: "bold",
+    
+
+    }
+    }
+    hover={{
+          backgroundColor: "#a66b1e",
+          color: "white",
+        }}
+
+   
+     >ADD User</Button></Link>
       <SimpleTable dataSource={users} />
       </div>
     </div>

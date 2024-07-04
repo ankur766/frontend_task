@@ -1,5 +1,5 @@
 import React from "react";
-import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import { DataGrid } from '@mui/x-data-grid';
 
 import { Link } from "react-router-dom";
 import  '../assets/css/table.css'
