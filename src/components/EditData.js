@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-
+import '../assets/css/commonInput.css'
 export default function EditData(props) {
   const { id } = useParams();
   const { editUser, userState } = props;
@@ -34,47 +34,58 @@ export default function EditData(props) {
     }
   
   };
- 
+  const handelnavigate=()=>{
+    navigate('/')
+  }
 
   return (
-    <form className="form">
-  <div className="form-group">
-    <label htmlFor="name">Your Name</label>
-    <input
-      type="text"
-      className="form-control"
-    
-     required
-      placeholder="Enter Name"
+    <div className="formcontainer">
+   
+    <h1 className="heading">Update User</h1> 
 
-      value={name} 
-        onChange={(e) => {
-         setName(e.target.value);
-       }}
-      
 
-    />
-  </div>
-  <div className="form-group">
-    <label htmlFor="email">Email Address</label>
-    <input
-      type="email"
-      className="form-control"
-     
-      placeholder="abc@gmail.com"
-      required
-      value={email} 
+ <form >
+  
+<div className="form-group">
+  <label htmlFor="name">Your Name</label>
+  <input
+    type="text"
+    className="form-control"
+  
+   required
+    placeholder="Enter Name"
+
+    value={name} 
       onChange={(e) => {
-       setEmail(e.target.value);
-         }}
+       setName(e.target.value);
+     }}
+    
 
-    />
-  </div>
- 
-  <button type="submit" className="btn btn-primary" onClick={handleSubmit}>
-    Submit
-  </button>
+  />
+</div>
+<div className="form-group">
+  <label htmlFor="email">Email Address</label>
+  <input
+    type="email"
+    className="form-control"
+   
+    placeholder="abc@gmail.com"
+    required
+    value={email} 
+    onChange={(e) => {
+     setEmail(e.target.value);
+       }}
+
+  />
+</div>
+
+<button type="submit" className="btnclass btn btn-primary" onClick={handleSubmit}>
+  Submit
+</button>
+ <button  className=" btnclass btn btn-danger" onClick={ handelnavigate}>Cancle</button>
+
 </form>
+</div>
   );
 }
 

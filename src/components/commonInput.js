@@ -24,8 +24,8 @@ const handelnavigate=()=>{
   Navigate('/')
 }
   return (
-     <div className="form">
-      <button  className="btn btn-primary" onClick={ handelnavigate}>No more Data</button>
+     <div className="formcontainer">
+      <button  className="btn btn-primary" onClick={ handelnavigate}>No Add more Data</button>
       <h1 className="heading">Add User</h1> 
 
   
@@ -64,9 +64,10 @@ const handelnavigate=()=>{
     />
   </div>
  
-  <button type="submit" className="btn btn-primary" onClick={handleSubmit}>
+  <button type="submit" className="btnclass btn btn-primary" onClick={handleSubmit}>
     Submit
   </button>
+ 
 </form>
 </div>
   

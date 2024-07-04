@@ -1,21 +1,38 @@
-.form{
+.formcontainer{
     margin-top: 10%;
     margin-left: 25%;
+    justify-content: center;
+    align-items: center;
+  width: 50%;
+    background-color: #f1f1f1;
+    font-size: larger;
+    font-style: inherit;
+    font-weight: bold;
+    border-radius: 10px;
+    gap: 200px;
+    color: aliceblue;
+    line-gap-override: 20px;
+    background-color:  #c88328;
+    padding: 10px;
+    
+  
+}
+.form{
+   
     width: 40rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: auto;
     background-color: bisque;
     font-size: larger;
     font-style: inherit;
     font-weight: bold;
     border-radius: 10px;
-    gap: 8px;
     color: aliceblue;
-    background-color: black;
-    line-gap-override: 20px;
+   
+   
     }
     .form label{
         margin-top: 1rem;
@@ -31,4 +48,13 @@
         font-style: italic;
         
     }
-   
+
+    .btnclass { align-items: center;
+        margin-top: 1rem;
+        
+      justify-content: center;
+        border-radius: 5px;
+        border: none;
+        padding: 5px;
+    
+    }
